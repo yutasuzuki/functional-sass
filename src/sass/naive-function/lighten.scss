@@ -1,0 +1,17 @@
+$base-color: #000;
+
+$color-gray-dark: lighten($base-color, 15%);
+$color-gray: lighten($base-color, 30%);
+$color-gray-light: lighten($base-color, 45%);
+
+.font-gray-dark {
+  color: $color-gray-dark;
+}
+
+.font-gray {
+  color: $color-gray;
+}
+
+.font-gray-light {
+  color: $color-gray-light;
+}

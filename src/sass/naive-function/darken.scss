@@ -1,0 +1,17 @@
+$base-color: #fff;
+
+$color-gray-dark: darken($base-color, 45%);
+$color-gray: darken($base-color, 30%);
+$color-gray-light: darken($base-color, 15%);
+
+.font-gray-dark {
+  color: $color-gray-dark;
+}
+
+.font-gray {
+  color: $color-gray;
+}
+
+.font-gray-light {
+  color: $color-gray-light;
+}

@@ -1,25 +1,17 @@
-/**
- * [color description]
- * @type {[type]}
- */
-// rgba
 $base-font-color: #4e5067;
-.font-gray-darker {
-    color: rgba($base-font-color, 1);
-}
+
+$color-gray-dark: rgba($base-font-color, 1);
+$color-gray: rgba($base-font-color, .75);
+$color-gray-light: rgba($base-font-color, .5);
 
 .font-gray-dark {
-    color: rgba($base-font-color, .85);
+  color: $color-gray-dark;
 }
 
 .font-gray {
-    color: rgba($base-font-color, .7);
+  color: $color-gray;
 }
 
 .font-gray-light {
-    color: rgba($base-font-color, .55);
-}
-
-.font-gray-lighter {
-    color: rgba($base-font-color, .4);
+  color: $color-gray-light;
 }
