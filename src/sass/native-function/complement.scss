@@ -1,0 +1,8 @@
+// 補色（色相環で正反対に位置する色）
+$base-color: #00f;
+
+$color-yellow: complement($base-color);
+
+.font-yellow {
+  color: $color-yellow;
+}

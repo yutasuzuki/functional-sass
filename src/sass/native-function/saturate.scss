@@ -1,0 +1,18 @@
+// 彩度を％で指定
+$base-font-color: #333;
+
+$color-gray-dark: saturate($base-font-color, 20%);
+$color-gray: saturate($base-font-color, 50%);
+$color-gray-light: saturate($base-font-color, 80%);
+
+.font-gray-dark {
+  color: $color-gray-dark;
+}
+
+.font-gray {
+  color: $color-gray;
+}
+
+.font-gray-light {
+  color: $color-gray-light;
+}
