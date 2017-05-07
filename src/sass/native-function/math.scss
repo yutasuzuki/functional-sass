@@ -1,0 +1,23 @@
+// 四捨五入
+.round {
+  height: round(66.66666666px);
+  width: round(33.33333333px);
+}
+
+// 切り上げ
+.ceil {
+  height: ceil(66.66666666px);
+  width: ceil(33.33333333px);
+}
+
+// 切り捨て
+.floor {
+  height: floor(66.66666666px);
+  width: floor(33.33333333px);
+}
+
+// 絶対値
+.abs {
+  height: abs(-66px);
+  width: abs(-33px);
+}

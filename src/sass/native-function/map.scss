@@ -1,0 +1,38 @@
+// 連想配列
+// key: value で追加
+$planets: (
+  mercury: #00f,
+  venus: #ff0,
+  earth: #fff,
+  mars: #f00,
+  jupiter: #a52a2a,
+);
+
+.item-mercury {
+  background-color: map-get($planets, mercury);
+}
+
+.item-venus {
+  background-color: map-get($planets, venus);
+}
+
+// 連想配列のネスト
+$list: (
+  item: (
+    nest-item: 'nested!'
+  )
+);
+
+.nest-item {
+  content: map-get(map-get($list, item), nest-item);
+}
+
+// keyの取り出し
+.keys {
+  content: map-keys($planets);
+}
+
+// valueの取り出し
+.values {
+  content: map-values($planets);
+}

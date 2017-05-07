@@ -1,0 +1,23 @@
+// 配列の表示
+$list: 'foo', 'bar', 'baz';
+
+.baz {
+  content: nth($list, 2);
+}
+
+// 配列の追加
+$hoges: hoge1, hoge2;
+
+.join {
+  content: join($list, $hoges);
+}
+
+// 配列の長さ
+.length {
+  z-index: length($list);
+}
+
+// 配列に追加
+.append {
+  content: append($list, sample);
+}

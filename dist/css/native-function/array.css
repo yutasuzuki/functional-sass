@@ -1,0 +1,11 @@
+.baz {
+  content: "bar"; }
+
+.join {
+  content: "foo", "bar", "baz", hoge1, hoge2; }
+
+.length {
+  z-index: 3; }
+
+.append {
+  content: "foo", "bar", "baz", sample; }

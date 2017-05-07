@@ -1,0 +1,10 @@
+.quote {
+
+  &::before {
+    content: quote(before);
+  }
+
+  &::after {
+    content: unquote('after');
+  }
+}

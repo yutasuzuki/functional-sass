@@ -1,18 +1,18 @@
 // 彩度を％で指定
-$base-font-color: #333;
+$base-font-color: #981237;
 
-$color-gray-dark: saturate($base-font-color, 20%);
-$color-gray: saturate($base-font-color, 50%);
-$color-gray-light: saturate($base-font-color, 80%);
+$color-dark: desaturate($base-font-color, 70%);
+$color-normal: desaturate($base-font-color, 50%);
+$color-light: desaturate($base-font-color, 20%);
 
-.font-gray-dark {
-  color: $color-gray-dark;
+.font-dark {
+  color: $color-dark;
 }
 
-.font-gray {
-  color: $color-gray;
+.font-normal {
+  color: $color-normal;
 }
 
-.font-gray-light {
-  color: $color-gray-light;
+.font-light {
+  color: $color-light;
 }
