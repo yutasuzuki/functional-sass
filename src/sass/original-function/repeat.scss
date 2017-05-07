@@ -1,0 +1,17 @@
+// .user-〇〇というclassの作成
+$users: (
+  hashi: (
+    color: #00f
+  ),
+  tani: (
+    color: #f00
+  )
+);
+
+.user {
+  @each $key, $value in $users {
+    @at-root #{&}-#{$key} {
+      background-color: map-get($value, color);
+    }
+  }
+}
