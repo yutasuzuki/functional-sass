@@ -1,4 +1,4 @@
-// .user-〇〇というclassの作成
+// each
 $users: (
   hashi: (
     color: #00f
@@ -12,6 +12,15 @@ $users: (
   @each $key, $value in $users {
     @at-root #{&}-#{$key} {
       background-color: map-get($value, color);
+    }
+  }
+}
+
+// for
+.grid {
+  @for $i from 1 through 12 {
+    @at-root #{&}-#{$i} {
+      width: 100 / 12 * $i + %;
     }
   }
 }
