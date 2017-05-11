@@ -1,0 +1,12 @@
+// 一行で書けるif文
+// if(bool, 真, 偽)
+
+.unif {
+  color: if(global-variable-exists(color), $color, #f00);
+}
+
+$color: #00f;
+
+.if {
+  color: if(global-variable-exists(color), $color, #f00);
+}
