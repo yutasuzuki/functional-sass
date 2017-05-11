@@ -4,7 +4,9 @@
 
 Sassを書く時に同じようなやつ書いていない？
 
-```sass
+css
+
+```css
 .mt-5 {
   margin-top: 5px;
 }
@@ -20,8 +22,21 @@ Sassを書く時に同じようなやつ書いていない？
 .mt-1000 {
   margin-top: 1000px;
 }
-
 ```
+
+sass
+
+```sass
+@for $i from 1 through 200 {
+  $val: 5 * $i;
+
+  .mt-#{$val} {
+    margin-top: $val + px;
+  }
+}
+```
+
+
 
 ## Sassの機能
 
