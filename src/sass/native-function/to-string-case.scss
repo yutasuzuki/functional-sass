@@ -1,0 +1,7 @@
+$hex: '#EA07ca';
+$class-name: 'UsEr';
+
+.#{to-lower-case($class-name)}-name {
+  color: unquote(to-lower-case($hex));
+  border-bottom: unquote(to-upper-case($hex));
+}
