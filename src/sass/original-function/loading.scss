@@ -1,0 +1,77 @@
+@import 'util';
+$a: 10  ;
+$duration: 1.335s;
+$r: 30px;
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  border-radius: 6px;
+  width: $r*3+20px;
+  height: $r*3+20px;
+  transform: translate(-50%, -50%) scale(.75, .75);
+
+  .loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    font-size: 16px;
+    animation-name: loading-text-effect;
+    animation-duration: $duration;
+    animation-timing-function: cubic-bezier(0, .61, .58, 1);
+    animation-iteration-count: infinite;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .loading-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-timing-function: cubic-bezier(0, .61, .58, 1);
+    animation-iteration-count: infinite;
+    animation-duration: $duration;
+  }
+}
+
+@for $i from 1 through 6 {
+  .loading-loader {
+    &:nth-child(#{$i}) {
+      animation-name: hexa-#{$i};
+    }
+  }
+  $angle: $i * 60deg - 60deg - 90deg;
+  @keyframes hexa-#{$i} {
+    0% {
+      transform: translate(-50%, -50%) translate(cos($angle) * $r/2, sin($angle) * $r/2) rotate(-60deg);
+    }
+
+    10% {
+      transform: translate(-50%, -50%) translate(cos($angle) * $r*1.5, sin($angle) * $r*1.5) rotate(-60deg);
+    }
+
+    40%,
+    45% {
+      transform: translate(-50%, -50%) translate(cos($angle) * $r*1.5, sin($angle) * $r*1.5) rotate(0deg);
+    }
+
+    55%,
+    70% {
+      transform: translate(-50%, -50%) translate(cos($angle) * $r/2, sin($angle) * $r/2) rotate(0deg);
+    }
+
+    90%,
+    100% {
+      transform: translate(-50%, -50%) translate(cos($angle) * $r/2, sin($angle) * $r/2) rotate(0deg);
+    }
+  }
+}

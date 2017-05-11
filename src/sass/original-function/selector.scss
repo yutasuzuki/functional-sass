@@ -1,0 +1,19 @@
+// li を | で区切るやつ
+@function separator($selector) {
+  @return '#{$selector}:nth-of-type(n+2)';
+}
+
+#{separator('li')} {
+  &:before {
+    content: '|';
+  }
+}
+
+// ボタンのfocusとhoverにバックグラウンドをつけるやつ
+@function button-active($selector) {
+  @return '#{$selector}:focus, #{$selector}:hover';
+}
+
+#{button-active('.form-submit')} {
+  background-color: #335;
+}
