@@ -1,8 +1,6 @@
 # functional-sass
 
-## イントロ
-
-* よくあるCSS
+## よくあるCSS
 
 css
 
